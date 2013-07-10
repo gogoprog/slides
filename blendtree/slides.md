@@ -30,23 +30,23 @@
 
 ---
 # Animated Blend Tree - Nodes
-## ANIMATED_BLEND_RANDOM_MIXER
+## ANIMATED_BLEND_MIXER
 
 ---
 # Animated Blend Tree - Nodes
-## ANIMATED_BLEND_RANDOM_SEQUENCE
+## ANIMATED_BLEND_SEQUENCE
 
 ---
 # Animated Blend Tree - Nodes
-## ANIMATED_BLEND_RANDOM_LOCOMOTION
+## ANIMATED_BLEND_LOCOMOTION
 
 ---
 # Animated Blend Tree - Nodes
-## ANIMATED_BLEND_RANDOM_DEFORMER
+## ANIMATED_BLEND_DEFORMER
 
 ---
 # Animated Blend Tree - Nodes
-## ANIMATED_BLEND_RANDOM_LOOK_AT
+## ANIMATED_BLEND_LOOK_AT
 
 ---
 # Animated Blend Tree - Usage
