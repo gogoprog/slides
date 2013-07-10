@@ -15,7 +15,14 @@
 
 ---
 # Animated Blend Tree - Concept
+## Before
+ * Update = Sample
 
+## Now
+ * Asks his root node to update/blend
+ * Nodes can have children nodes
+ * Updated each frame : advances cursors
+ * Blend called only on GetPose on model : when in visible set.
 ---
 # Animated Blend Tree - Nodes
 ## ANIMATED_BLEND_SWITCH
@@ -24,21 +31,49 @@
 # Animated Blend Tree - Nodes
 ## ANIMATED_BLEND_LEAF_ANIMATION
 
+ * Has a ANIMATED_ANIMATION
+ * Blend will sample its animation
+ * So no children
+
+---
+# Animated Blend Tree - Nodes
+## ANIMATED_BLEND_SWITCH
+
+ * Has children
+ * Can cross fade between children
+ * Cross-fade is manual
+
 ---
 # Animated Blend Tree - Nodes
 ## ANIMATED_BLEND_RANDOM_SWITCH
+
+ * Has children
+ * Can cross fade between children
+ * Cross-fade is automatic (when looping)
 
 ---
 # Animated Blend Tree - Nodes
 ## ANIMATED_BLEND_MIXER
 
+ * Has children
+ * Blend will mix its children
+ * Weight per child
+
 ---
 # Animated Blend Tree - Nodes
 ## ANIMATED_BLEND_SEQUENCE
 
+ * Has children
+ * Can cross fade between children
+ * Cross-fade is automatic (children order)
+
 ---
 # Animated Blend Tree - Nodes
 ## ANIMATED_BLEND_LOCOMOTION
+
+ * Has children
+ * Can cross fade between children
+ * Cross-fade is manual
 
 ---
 # Animated Blend Tree - Nodes
@@ -115,7 +150,7 @@ ANIMATED_BLEND_TREE_LOADER
             },
             {
                 "name":"idle",
-                "type":"animation",
+                "type":"random",
                 "loop": true
             },
             {
