@@ -6,11 +6,12 @@
 
  * operator++()
  * operator->()
- * operator*()
+ * Usage to mimic STL
 
 ---
 # Various C++ tricks
 ## operator++()
+### Syntaxes
 
 2 syntaxes : var++ and ++var
 
@@ -28,6 +29,7 @@
 ---
 # Various C++ tricks
 ## operator++()
+### Usage
 
     !c++
     _CLASS_ & operator++()
@@ -83,3 +85,28 @@ d->foo() expands to
         d.operator->().operator->().operator->()->foo();
       (*d.operator->().operator->().operator->()).foo();
     //  D            C            B           A*
+
+---
+# Various C++ tricks
+## Usage to mimic STL
+### Problem
+
+* STL map::iterator behavior from a PRIMITIVE_DICTIONARY_OF_::POSITION
+  * std::map::iterator
+    * (*itr) returns a std::pair<key, item>
+    * itr->first returns the key
+    * itr->second returns the item
+  * POSITION
+    * position->GetKey() returns the key
+    * position->GetItem() or *position returns the item
+
+
+-> Don't want to change the way we store elements (no pair in our containers)<br/>
+-> But we need the pair behavior to access key/item
+
+---
+# Various C++ tricks
+## Usage to mimic STL
+### Solution
+
+Check interface_container_rocket_map_of_.h
