@@ -78,3 +78,22 @@ Need something to help...
 ## 7 cards
 
 ### Tags
+
+
+---
+# Behind the Screen : Poker game
+
+## Faking the hands
+
+Goal : Win X points in Y hands.
+
+Is previous code useless?
+
+No, use random as :
+
+    while(totalPoints != pointsToWin)
+    {
+        totalPoints = 0;
+        cards = getRandomCards();
+        totalPoints = findHand(cards).value;
+    }
