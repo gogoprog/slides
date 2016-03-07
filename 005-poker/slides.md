@@ -39,10 +39,19 @@ Just follow the order and return the match
 
 First handled as 1
 
-    5  4  2  1  A
+<img style='display:inline-block;' src='images/5_of_clubs.png'/>
+<img style='display:inline-block;' src='images/4_of_diamonds.png'/>
+<img style='display:inline-block;' src='images/3_of_clubs.png'/>
+<img style='display:inline-block;' src='images/2_of_spades.png'/>
+<img style='display:inline-block;' src='images/ace_of_hearts.png'/>
 
-    K  Q  J  10 A
-    |----------|
+Special case for value 14
+
+<img style='display:inline-block;' src='images/king_of_diamonds.png'/>
+<img style='display:inline-block;' src='images/queen_of_diamonds.png'/>
+<img style='display:inline-block;' src='images/jack_of_hearts.png'/>
+<img style='display:inline-block;' src='images/10_of_clubs.png'/>
+<img style='display:inline-block;' src='images/ace_of_hearts.png'/>
 
 If 4 consecutive cards from K to 10 and Ace is found followed by Ace then :
 Straight has been found.
@@ -58,17 +67,35 @@ This looked fine until... 7 cards!
 
 ### New issues
 
-    10  9  8  8  7  6  3
+<img style='display:inline-block;' src='images/10_of_clubs.png'/>
+<img style='display:inline-block;' src='images/9_of_diamonds.png'/>
+<img style='display:inline-block;' src='images/8_of_clubs.png'/>
+<img style='display:inline-block;' src='images/8_of_spades.png'/>
+<img style='display:inline-block;' src='images/7_of_hearts.png'/>
+<img style='display:inline-block;' src='images/6_of_hearts.png'/>
+<img style='display:inline-block;' src='images/3_of_clubs.png'/>
 
 There is a straight but no 4 consecutive cards.
 
-    K  Q  J  10  9  A  A
+<img style='display:inline-block;' src='images/king_of_diamonds.png'/>
+<img style='display:inline-block;' src='images/queen_of_diamonds.png'/>
+<img style='display:inline-block;' src='images/jack_of_hearts.png'/>
+<img style='display:inline-block;' src='images/10_of_clubs.png'/>
+<img style='display:inline-block;' src='images/9_of_clubs.png'/>
+<img style='display:inline-block;' src='images/2_of_hearts.png'/>
+<img style='display:inline-block;' src='images/ace_of_hearts.png'/>
 
 5 consecutive cards + Aces that could complete the straight
 
-    7  6  5  4  3  K  Q
+<img style='display:inline-block;' src='images/7_of_clubs.png'/>
+<img style='display:inline-block;' src='images/6_of_clubs.png'/>
+<img style='display:inline-block;' src='images/5_of_clubs.png'/>
+<img style='display:inline-block;' src='images/4_of_clubs.png'/>
+<img style='display:inline-block;' src='images/3_of_hearts.png'/>
+<img style='display:inline-block;' src='images/2_of_hearts.png'/>
+<img style='display:inline-block;' src='images/2_of_clubs.png'/>
 
-There is a straight but maybe a flush?
+There is a straight but maybe also a flush!
 
 Need something to help...
 
